@@ -14,8 +14,8 @@ if [ $TOTD_HTTP ] ; then
   TIPLABEL="HTTP $CURTIP"
   NUMTIPS=8 # This is not very clever and should be improved!
 else
-  NUMTIPS=`ls $TIPREPO/*.txt | wc -l`
-  TIPLABEL="$TIPREPO/$CURTIP.txt"
+  NUMTIPS=`ls $TIPREPO/*.md | wc -l`
+  TIPLABEL="$TIPREPO/$CURTIP.md"
 fi
 
 echo
@@ -23,9 +23,9 @@ echo "================================================"
 echo " TIP OF TODAY ($TIPLABEL) "
 echo "------------------------------------------------"
 if [ $TOTD_HTTP ] ; then
-  curl http://192.168.3.16/tips/$CURTIP.txt 2>/dev/null
+  curl http://192.168.3.16/tips/$CURTIP.md 2>/dev/null
 else
-  cat $TIPREPO/$CURTIP.txt
+  cat $TIPREPO/$CURTIP.md
 fi
 echo "================================================"
 echo
