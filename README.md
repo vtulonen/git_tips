@@ -1,3 +1,5 @@
+# Homework assignment for software production course to practice git branches, pull requests etc. 
+
 # Tips of the day for bash cli
 
 ## Basic idea
